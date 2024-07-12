@@ -27,22 +27,29 @@ namespace ProductApp
             productB.SetPrice(100);
             productB.SetDiscount(10);
 
-            Console.WriteLine("Product A");
-            Console.WriteLine("Id : " + productA.GetId());
-            Console.WriteLine("Name : " + productA.GetName());
-            Console.WriteLine("Price : " + productA.GetPrice());
-            Console.WriteLine("Discount : " + productA.GetDiscount());
-            Console.WriteLine("Price after Discount is : " + productA.CalculateDiscount());
-            
-            Console.WriteLine("\nProduct B");
-            Console.WriteLine("Id : " + productB.GetId());
-            Console.WriteLine("Name : " + productB.GetName());
-            Console.WriteLine("Price : " + productB.GetPrice());
-            Console.WriteLine("Discount : " + productB.GetDiscount());
-            Console.WriteLine("Price after Discount is : " + productB.CalculateDiscount());
+            PrintDetails(productA);
+            PrintDetails(productB);
 
+            //Console.WriteLine("\nId : " + productA.GetId());
+            //Console.WriteLine("Name : " + productA.GetName());
+            //Console.WriteLine("Price : " + productA.GetPrice());
+            //Console.WriteLine("Discount : " + productA.GetDiscount());
+            //Console.WriteLine("Price after Discount is : " + productA.CalculateDiscount());
 
+            //Console.WriteLine("\nId : " + productB.GetId());
+            //Console.WriteLine("Name : " + productB.GetName());
+            //Console.WriteLine("Price : " + productB.GetPrice());
+            //Console.WriteLine("Discount : " + productB.GetDiscount());
+            //Console.WriteLine("Price after Discount is : " + productB.CalculateDiscount());
 
+        }
+        public static void PrintDetails(Product product)
+        {
+            Console.WriteLine("\nId : " + product.GetId());
+            Console.WriteLine("Name : " + product.GetName());
+            Console.WriteLine("Price : " + product.GetPrice());
+            Console.WriteLine("Discount : " + product.GetDiscount());
+            Console.WriteLine("Price after Discount is : " + product.CalculateDiscountedPrice());
 
         }
     }
